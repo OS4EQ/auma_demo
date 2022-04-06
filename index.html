@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/@oseq/auma/dist/auma-decision-tree.js"></script>
+  </head>
+  <body>
+    <script>
+      auma({
+        id: "demo-decision-tree",
+        theme: {
+          logoUrl: "./auma.png",
+          buttonYesBgColor: "#6699cc",
+          buttonYesFgColor: "#ffffff",
+          buttonNoBgColor: "#77dd77",
+          buttonNoFgColor: "#ffffff",
+        },
+        welcome: {
+          audioUrl: "./audio/welcome.mp3",
+        },
+        questions: [
+          {
+            id: "question_1",
+            audioUrl: "./audio/question_1.mp3",
+            imageUrl: "./image/question_1.jpg",
+            onYes: "question:question_2",
+            onNo: "question:question_3",
+          },
+          {
+            id: "question_2",
+            audioUrl: "./audio/question_2.mp3",
+            imageUrl: "./image/question_2.jpg",
+            onYes: "result:result_1",
+            onNo: "result:result_2",
+          },
+          {
+            id: "question_3",
+            audioUrl: "./audio/question_3.mp3",
+            imageUrl: "./image/question_3.jpg",
+            onYes: "result:result_3",
+            onNo: "result:result_4",
+          },
+        ],
+        results: [
+          {
+            id: "result_1",
+            audioUrl: "./audio/result_1.mp3",
+            imageUrl: "./image/result_1.jpg",
+          },
+          {
+            id: "result_2",
+            audioUrl: "./audio/result_2.mp3",
+            imageUrl: "./image/result_2.jpg",
+          },
+          {
+            id: "result_3",
+            audioUrl: "./audio/result_3.mp3",
+            imageUrl: "./image/result_3.jpg",
+          },
+          {
+            id: "result_4",
+            audioUrl: "./audio/result_4.mp3",
+            imageUrl: "./image/result_4.jpg",
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>
